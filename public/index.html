@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Quiz Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🧠 AI Quiz Generator</h1>
+        
+        <div id="topic-screen">
+            <input type="text" id="topic-input" placeholder="Enter quiz topic (e.g., 'The Roman Empire')" required>
+            <button id="generate-btn">Generate 10-Question Quiz</button>
+            <p id="error-message" class="error"></p>
+        </div>
+
+        <div id="quiz-screen" class="hidden">
+            <h2 id="quiz-topic"></h2>
+            <div id="question-container">
+                <p id="question-text"></p>
+                <div id="options-container">
+                    </div>
+            </div>
+            <button id="next-btn">Next Question</button>
+        </div>
+
+        <div id="score-screen" class="hidden">
+            <h2>Quiz Finished!</h2>
+            <p>Your final score is: <span id="final-score"></span> / 10</p>
+            <button id="restart-btn">Try Another Topic</button>
+        </div>
+        
+        <div id="loading" class="hidden">
+            <div class="spinner"></div>
+            <p>Generating quiz with Gemini...</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
